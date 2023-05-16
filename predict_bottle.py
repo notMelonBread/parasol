@@ -1,17 +1,19 @@
 from keras.utils import load_img, img_to_array
 from keras.models import model_from_json
 import numpy as np
+from pathlib import Path
 
 
 # 画像が保存されているルートディレクトリのパス
-root_dir = (".\\")
+root_dir = Path(__file__).resolve().parent
+
 # 商品名
 categories = ["water", "tea"]
 # 保存したモデルの読み込み
 model = model_from_json(
-    open(root_dir + "\\tea_predict.json").read())
+    open(root_dir /  "tea_predict.json").read())
 # 保存した重みの読み込み
-model.load_weights(root_dir + "\\tea_predict.hdf5")
+model.load_weights(root_dir / "tea_predict.hdf5")
 
 
 # 画像を読み込む
