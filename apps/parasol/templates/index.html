@@ -8,7 +8,9 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}" />
+    <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="{{ url_for('static',filename='common.css') }}" />
+    <link rel="stylesheet" href="../static/common.css">
 </head>
 
 <body>
@@ -22,11 +24,12 @@
                 <video id="video"></video>
             </a>
             <div class="txtBox">
-                <p class="indicater">ここに読み上げられるテキストがきます</p>
+                <p id="indicator">ここに読み上げられるテキストがきます</p>
             </div>
         </div>
     </div>
-    <script src="{{ url_for('static',filename='script.js') }}"></script>
 </body>
+<script src="{{ url_for('static',filename='script.js') }}"></script>
+<script src="../static/script.js"></script>
 
 </html>
