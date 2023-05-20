@@ -1,8 +1,21 @@
-.inner{
+.wrapper{
     display: block;
-    max-inline-size: max-content;
-    margin-inline: auto;
+    width: 100vw;
+    height: 100vh;
+    
 }
+
+.inner{
+    width: 85vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+@media (width <= 620px) {
+    .inner{
+        width: 100vw;
+    }
+}
+
 .topNavigation{
     display: flex;
     justify-content: space-between;
@@ -16,6 +29,27 @@
 
 .camera{
     position: relative;
+	height: 100vh;
+}
+#video{
+    /* margin: 0 auto; */
+    position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    height: calc(100vh - 45px);
+
+	overflow: hidden;
+}
+video{
+
+    justify-items: center;
+    align-items: center;
+
+	object-fit: cover;
+	height: 100vh;
+
 }
 
 .txtBox{
@@ -35,3 +69,12 @@
     color: #fff;
     font-weight: lighter;
 }
+/* body {
+    top: env(safe-area-inset-top);
+    margin-top: env(safe-area-inset-top);
+    padding-top: calc(env(safe-area-inset-top) + 20px);
+
+    bottom: env(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 40px);
+} */
