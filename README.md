@@ -1,2 +1,1 @@
-# parasol
-ハッカソン用のリポジトリ
+# vistaVend
